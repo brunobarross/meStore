@@ -1,0 +1,60 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #DDDFE5;
+  padding: 2.5rem 0;
+  grid-area: sidebar;
+
+
+  .sidebar--logo {
+    margin: 0 auto;
+  }
+
+  .sidebar--menu {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid #DDDFE5;
+
+    li {
+      padding: 1rem 1.375rem;
+      position: relative;
+
+      &:hover,
+      &:focus {
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 3px;
+          height: 100%;
+          background-color: $cor--primaria;
+        }
+      }
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        font-size: 1rem;
+        color: $cor--texto-neutra;
+        font-weight: 700;
+        transition: .3s ease;
+
+        ion-icon {
+          margin-right: .75rem;
+          font-size: 1.375rem
+        }
+
+        &:focus,
+        &:hover {
+          color: $cor--primaria;
+        }
+      }
+    }
+
+  }
+}

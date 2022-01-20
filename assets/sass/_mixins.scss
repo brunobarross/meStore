@@ -1,0 +1,156 @@
+// ===================================================
+@import "./variaveis_cores";
+@import "./variaveis_gerais";
+@import "./utilities/responsivo";
+@import "./utilities/clamp";
+@import "./utilities/utilitarios";
+
+//exemplo de botao pra voce customizar
+@mixin Botao($cor-texto:white, $cor-background) {
+
+    //container
+    //
+    a {
+        display: inline-flex;
+        align-items: center;
+        color: $cor-texto;
+        background: $cor-background;
+        cursor: pointer;
+        font-size: 1.25rem;
+        text-decoration: none;
+
+        //padding sempre no link  para aumentar a zona de contato
+        //icones dentro dos links para ele tbm ser clicavel
+        ion-icon {
+            margin-left: 10px;
+        }
+    }
+
+    //hover
+    a {
+        &:hover {}
+
+        &:hover ion-icon {}
+    }
+}
+
+@mixin title--secoes-produtos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h2 {
+        display: inline-block;
+        font-size: 3rem;
+        line-height: 150%;
+        font-weight: 700;
+        color: $cor-preto-1;
+    }
+
+    p {
+        margin-top: 8px;
+        font-size: 1rem;
+        color: $cor-cinza-3;
+    }
+}
+
+@mixin banners {}
+
+@mixin botao($cor-texto, $cor-fundo, $cor-fundo-hover) {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: $cor-texto;
+    font-weight: 700;
+    background: $cor-fundo;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 1.25rem 1.25rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: background .3s ease;
+
+    &:hover {
+        background: $cor-fundo-hover;
+    }
+}
+
+@mixin hamburguer {
+    border-top: 2px solid $cor-preto-1;
+    width: 32px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    z-index: 101;
+
+    &::after,
+    &::before {
+        content: "";
+        display: block;
+        background: $cor-preto-1;
+        width: 32px;
+        height: 2px;
+        margin-top: 8px;
+        position: relative;
+        transition: transform .2s ease;
+        will-change: transform;
+        border-radius: 8px;
+    }
+}
+
+@mixin setaSwiper {
+
+    .prev,
+    .next {
+        position: absolute;
+        background: #EDF2FF;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 64px;
+        width: 64px;
+        border-radius: 50%;
+        z-index: 100;
+
+        @include d(s) {
+            width: 40px;
+            height: 40px;
+        }
+
+        ion-icon {
+            color: $cor-azul-1;
+            font-size: rem(18);
+        }
+    }
+
+    .prev {
+        left: 0;
+    }
+
+    .next {
+        right: 0;
+    }
+
+    .swiper-button-disabled {
+        background: rgba(0, 0, 0, .4);
+        opacity: .5;
+
+        ion-icon {
+            color: $cor-branco-1;
+            font-size: rem(18);
+        }
+    }
+}
+
+
+@mixin cores($cor--background) {
+    content: "";
+    margin-right: .5rem;
+    display: block;
+    width: .75rem;
+    height: .75rem;
+    border-radius: 50%;
+    background: $cor--background;
+}

@@ -1,0 +1,26 @@
+@import "variaveis_gerais";
+@import "variaveis_cores";
+@import "../sass/mixins"; //MIXINS
+// UTILIDADES
+@import "../sass/utilities/utilitarios";
+@import "../sass/utilities/responsivo";
+@import "../sass/utilities/reset";
+@import "../sass/utilities/animation";
+//components
+@import "../sass/components/body"; //BODY
+@import "../sass/components/sidebar"; //BODY
+@import "../sass/components/barra-superior"; //BODY
+
+
+
+
+
+// PÁGINAS
+main {
+    overflow: hidden;
+}
+
+
+.body__dashboard {
+    @import "./pages/dashboard";
+}
