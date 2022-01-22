@@ -168,47 +168,8 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
 
-  <script>
-    var options = {
-      chart: {
-        type: 'area',
-        height: 400,
-        fontFamily: "'Mulish', sans-serif",
-      },
-      title: {
-        text: "Easings",
-        align: "left",
-        offsetX: 0,
-        style: {
-          fontSize: '18px',
-          color: 'var(--cor--neutra)'
-        },
-      },
-      colors: ['#33C863'],
-      fill: {
-        colors: ['#CCFFDC']
-      },
-
-      stroke: {
-        curve: 'smooth',
-      },
-
-      series: [{
-        name: 'Earnings',
-        data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
-      }],
-      xaxis: {
-        categories: ['Jan', 'Fev', 'Mar', 'Abr', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
-      },
-
-
-    }
-
-    var chart = new ApexCharts(document.querySelector("#chart--sales"), options);
-
-    chart.render();
-  </script>
 </body>
 
 
