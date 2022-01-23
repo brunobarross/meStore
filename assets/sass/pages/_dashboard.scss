@@ -87,6 +87,21 @@
 
         }
       }
+
+      .tabela {
+        tr {
+          font-weight: 700;
+          font-size: 1rem;
+        }
+
+        .estoque--ok {
+          color: $cor--primaria;
+        }
+
+        .estoque--false {
+          color: #EB5757;
+        }
+      }
     }
 
     .lista--vendedores {
